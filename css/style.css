@@ -1,0 +1,553 @@
+:root {
+    --bs-primary-rgb: 10, 74, 143; /* New corporate blue */
+    --bs-dark-rgb: 33, 37, 41;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+    padding-top: 70px; /* Offset for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.text-primary {
+    color: rgb(var(--bs-primary-rgb)) !important;
+}
+
+/* Navigation */
+#main-nav .navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+#main-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #212529; /* Changed from gray to black */
+}
+
+#main-nav .nav-link:hover {
+    color: rgb(var(--bs-primary-rgb));
+    transition: color 0.2s ease-in-out;
+}
+
+#main-nav .nav-link.active {
+    color: rgb(var(--bs-primary-rgb));
+}
+
+/* Magic Line Navigation */
+.navbar-nav {
+    position: relative;
+}
+
+.navbar-nav::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    height: 3px;
+    background-color: rgb(var(--bs-primary-rgb));
+    width: var(--magic-line-width, 0);
+    transform: translateX(var(--magic-line-left, 0));
+    transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+/* Header */
+.masthead {
+    padding: 0; /* Remove padding for carousel */
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.masthead .display-3 {
+    font-weight: 700;
+    color: rgb(var(--bs-dark-rgb));
+}
+
+.masthead .display-3 strong {
+    font-weight: 700;
+    color: rgb(var(--bs-primary-rgb));
+}
+
+/* Sections */
+.page-section {
+    padding: 6rem 0;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.section-subheading {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+}
+
+/* About Intro Section */
+.about-intro {
+    margin-top: 3rem;
+    margin-bottom: 5rem !important;
+}
+
+.about-intro h3 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.about-intro h2.section-heading {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* About Section - Card Layout */
+.about-card {
+    padding: 2.5rem;
+    border-radius: 0.75rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    text-align: center;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.about-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(var(--bs-primary-rgb), 0.1);
+    color: rgb(var(--bs-primary-rgb));
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Reviews Section */
+#reviews .review-content {
+    text-align: center;
+}
+
+#reviews .review-subtitle {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+#reviews .rating-score {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    color: rgb(var(--bs-primary-rgb));
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+#reviews .rating-stars {
+    font-size: 1.5rem;
+    color: #ffc107; /* Yellow for stars */
+    margin-bottom: 1.5rem;
+}
+
+#reviews .btn-primary {
+    padding: 1rem 2rem;
+    font-weight: 700;
+}
+
+#reviews .btn-outline-primary {
+    color: rgb(var(--bs-primary-rgb));
+    border-color: rgb(var(--bs-primary-rgb));
+}
+
+#reviews .btn-outline-primary:hover {
+    color: #fff;
+    background-color: rgb(var(--bs-primary-rgb));
+}
+
+/* Services Section */
+#services .feature-icon {
+    font-size: 4rem;
+    color: rgb(var(--bs-primary-rgb));
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+#features h6 {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+
+/* Gallery */
+#gallery .img-fluid {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#gallery .img-fluid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Customer Lounge Section */
+.lounge-features {
+    padding-left: 0;
+}
+
+.lounge-features li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.lounge-features .feature-icon-small {
+    font-size: 1.5rem;
+    color: rgb(var(--bs-primary-rgb));
+    margin-right: 1rem;
+    width: 30px; /* To align text nicely */
+    text-align: center;
+}
+
+.lounge-features p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 0;
+}
+
+#loungeCarousel .carousel-item img {
+    height: 100%;
+    max-height: 450px;
+    object-fit: cover;
+}
+
+/* Map Section */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 50%; /* Adjust this value for aspect ratio */
+    position: relative;
+    height: 0;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* Footer */
+.footer {
+    background-color: #212529; /* Dark gray */
+    color: #fff; /* White text for readability */
+}
+
+.footer-logo {
+    height: 70px; /* Increased logo size */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.footer-text {
+    font-size: 0.85rem; /* Smaller font size */
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.25rem;
+}
+
+.footer-text strong {
+    color: #fff;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 1rem;
+}
+
+.footer .text-muted {
+    color: rgba(255, 255, 255, 0.7) !important; /* Lighter white for muted text */
+}
+
+/* Carousel Customizations */
+#mainCarousel {
+    touch-action: pan-y; /* Improve scroll performance on touch devices */
+}
+
+.carousel-item img {
+    height: 500px; /* A fixed height instead of vh */
+    object-fit: cover;
+    filter: brightness(50%); /* Darken image for text readability */
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+.carousel-caption h1, .carousel-caption h2 {
+    color: #fff;
+}
+
+.carousel-caption h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.8rem; /* Slightly reduced font size for desktop */
+    font-weight: 700;
+    letter-spacing: 0px; /* Adjusted letter spacing */
+    line-height: 1.2;
+}
+
+.carousel-caption h1 .main-text-part1 {
+    font-size: 1em; /* Relative to h1, so it's the same size as h1 */
+    font-weight: 700;
+}
+
+.carousel-caption h1 .smaller-text {
+    font-size: 0.8em; /* Smaller relative to main-text-part1 */
+    font-weight: 400; /* Lighter weight for the question part */
+    display: inline; /* Keep it on the same line */
+}
+
+.short-break {
+    display: block;
+    height: 0.5em; /* Adjust this value to control the height of the line break */
+}
+
+.carousel-caption h2 { /* This rule is no longer used in HTML, but keeping for safety */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+}
+
+.carousel-caption .text-primary {
+    color: #fff !important; /* All text is white */
+}
+
+/* Social Link Base Styles */
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #fff; /* Default icon color is white */
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+/* Brand Colors */
+.social-link.naver-booking {
+    background-color: #03C75A; /* Naver Green */
+}
+.social-link.instagram {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.social-link.kakao {
+    background-color: #FEE500; /* Kakao Yellow */
+    color: #191919; /* Dark icon color for Kakao */
+}
+.social-link.naver-cafe {
+    background-color: #03C75A; /* Naver Green */
+}
+
+/* Footer Social Links (Mobile First) */
+.footer-social-links {
+    display: flex; /* Visible on mobile by default */
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social-links .social-link {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+}
+
+/* Floating Social Links (Mobile First) */
+.floating-social-links {
+    display: none; /* Hidden on mobile by default */
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 1030;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* Responsive adjustments for Desktop */
+@media (min-width: 768px) {
+    /* Show floating links on desktop */
+    .floating-social-links {
+        display: flex;
+    }
+
+    /* Hide footer social links on desktop */
+    .footer-social-links {
+        display: none;
+    }
+}
+
+/* Other Responsive adjustments */
+@media (max-width: 991px) { /* Adjusted breakpoint for better layout */
+    .footer .text-lg-start,
+    .footer .text-lg-end {
+        text-align: center !important;
+    }
+    .footer-logo {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    /* General Mobile Adjustments */
+    .page-section {
+        padding: 4rem 0;
+    }
+    .section-heading {
+        font-size: 2rem;
+    }
+    .section-subheading {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Header */
+    #main-nav .navbar-brand img {
+        height: 32px !important; /* Reduced logo size */
+    }
+    .navbar-toggler {
+        padding: .25rem .75rem; /* Re-add padding to ensure clickable area */
+        border: none;
+        background: transparent;
+    }
+    /* Manual .navbar-toggler-icon CSS removed, now using Font Awesome directly in HTML */
+    #main-nav {
+        box-shadow: none !important; /* Remove gray line under header */
+    }
+
+    /* Carousel */
+    .carousel-item img {
+        height: 400px; /* Fixed height for mobile */
+    }
+    .masthead .carousel-control-prev,
+    .masthead .carousel-control-next {
+        display: none; /* Hide carousel arrows on mobile */
+    }
+    .carousel-caption {
+        width: 90%;
+        right: 5%;
+        left: 5%;
+    }
+    .carousel-caption h1 {
+        font-size: 1.8rem; /* Further reduced for mobile to prevent wrapping */
+        line-height: 1.3;
+    }
+    .carousel-caption h1 .main-text-part1 {
+        font-size: 0.8em; /* New specific font size adjustment */
+    }
+    .carousel-caption h1 .smaller-text {
+        font-size: 0.8em;
+    }
+
+    /* About Intro */
+    .about-intro {
+        margin-bottom: 4rem !important;
+    }
+    .about-intro h3 {
+        font-size: 1.0rem; /* Reduced font size */
+    }
+    .about-intro h2.section-heading {
+        font-size: 1.8rem; /* Reduced font size */
+    }
+    .about-card {
+        padding: 2rem;
+    }
+
+    /* Services */
+    #services .feature-icon {
+        font-size: 3rem;
+    }
+    #services h6 {
+        font-size: 0.9rem;
+    }
+
+    /* Gallery */
+    #gallery .col-lg-6 {
+        text-align: center; /* Center align text content */
+    }
+    #gallery .lounge-features {
+        display: inline-block;
+        text-align: left; /* Keep list text left-aligned within the centered block */
+        margin-top: 2rem;
+    }
+    #gallery .display-6 {
+        font-size: 1.6rem; /* Reduced font size */
+    }
+
+    /* Reviews */
+    #reviews .review-content {
+        margin-top: 2rem;
+        text-align: center;
+    }
+    #reviews .rating-score {
+        font-size: 5rem;
+    }
+    #reviews .review-subtitle {
+        font-size: 1.1rem;
+    }
+    #reviews p.lead {
+        font-size: 0.9rem; /* Reduced font size */
+    }
+
+    /* Map */
+    .map-responsive {
+        padding-bottom: 80%; /* Increased height for mobile */
+    }
+
+    /* Footer */
+    .footer-logo {
+        display: none; /* Hide footer logo on mobile */
+    }
+
+    /* Mobile Scrolling Fix */
+    body {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+}
