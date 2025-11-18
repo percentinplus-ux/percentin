@@ -1,0 +1,8 @@
+name = "percentin-site"
+compatibility_date = "2025-11-18"
+main = "index.html"
+# This specifies that the current directory should be treated as the assets to deploy.
+# If you have a build step that outputs to a different directory (e.g., 'dist'),
+# you would change this to `bucket = "./dist"`.
+# For now, I'm assuming the root directory contains your static files.
+# I'm also setting `main` to `index.html` as a common entry point for static sites.
